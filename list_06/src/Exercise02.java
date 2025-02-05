@@ -5,17 +5,17 @@ public class Exercise02 {
     static public void main(String... argv) {
         ArrayList<HashMap<String, Object>> people = new ArrayList<>();
 
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         for (int i = 0; i < 10; i++) {
             System.out.println("Enter the age of person " + (i + 1) + ": ");
-            int age = data.nextInt();
+            int age = scan.nextInt();
 
             System.out.println("Enter the height of person " + (i + 1) + ": ");
-            double height = data.nextDouble();
+            double height = scan.nextDouble();
 
             System.out.println("Enter the weight of person " + (i + 1) + ": ");
-            double weight = data.nextDouble();
+            double weight = scan.nextDouble();
 
             HashMap<String, Object> person = new HashMap<>();
             person.put("age", age);
@@ -24,8 +24,6 @@ public class Exercise02 {
 
             people.add(person);
         }
-
-
         int olderThan50 = 0;
         int higherThan160 = 0;
         int lighterThan80 = 0;
@@ -45,5 +43,7 @@ public class Exercise02 {
         System.out.printf("%d People older than 50\n", olderThan50);
         System.out.printf("%d People taller than 160\n", higherThan160);
         System.out.printf("%d People lighter than 80\n", lighterThan80);
+
+        scan.close();
     }
 }

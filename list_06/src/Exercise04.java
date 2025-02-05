@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class Exercise04 {
     static public void main(String... argv){
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter a number: ");
-        int number = data.nextInt();
+        int number = scan.nextInt();
 
         System.out.println("Enter a increasement: ");
-        int increasement = data.nextInt();
+        int increasement = scan.nextInt();
 
         ArrayList<Integer> numbersList = new ArrayList<Integer>();
 
@@ -22,5 +22,6 @@ public class Exercise04 {
         }
 
         System.out.println(numbersList);
+        scan.close();
     }
 }

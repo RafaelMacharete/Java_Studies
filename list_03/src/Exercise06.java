@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Exercise06{
     static public void main(String... argv){
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         Random numberRandom = new Random();
 
         int numberRandomized = numberRandom.nextInt(100 ) + 1;
@@ -14,7 +14,7 @@ public class Exercise06{
 
         while (userChance >= 1){
             System.out.println("Enter a number: ");
-            int guessedNumber = data.nextInt();
+            int guessedNumber = scan.nextInt();
 
             if (guessedNumber == numberRandomized){
                 System.out.println("You guessed right!");
@@ -24,6 +24,6 @@ public class Exercise06{
                 userChance--;
             }
         }
-        data.close();
+        scan.close();
     }
 }

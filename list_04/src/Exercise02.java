@@ -1,16 +1,16 @@
-package list.src;
+package list_04.src;
 
 import java.util.Scanner;
 
 public class Exercise02 {
     static public void main(String... argv){
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter a integer number: ");
-        int number1 = data.nextInt();
+        int number1 = scan.nextInt();
 
         System.out.println("Enter another integer number: ");
-        int number2 = data.nextInt();
+        int number2 = scan.nextInt();
 
         System.out.println("Sum: " + (number1 + number2));
         System.out.println("Subtraction: " + (number1 - number2));
@@ -23,7 +23,7 @@ public class Exercise02 {
         System.out.println("High: " + (Math.pow(number1, number2)));
         System.out.println("Mod: " + number1 % number2);
 
-        data.close();
+        scan.close();
     }
 
 }

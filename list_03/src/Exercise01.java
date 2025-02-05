@@ -3,10 +3,10 @@ package list_03.src;
 import java.util.Scanner;
 public class Exercise01 {
     static public void main(String... argv){
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter your age: ");
-        int age = data.nextInt();
+        int age = scan.nextInt();
 
         if(age >= 0 && age <= 14){
             System.out.println("Classification: Kid");
@@ -18,6 +18,6 @@ public class Exercise01 {
             System.out.println("Classification: Adult");
         }
 
-        data.close();
+        scan.close();
     }
 }

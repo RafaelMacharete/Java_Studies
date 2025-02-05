@@ -3,21 +3,21 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class Exercise01 {
     static public void main(String... argv) {
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         int numbersList[] = new int[10];
 
         int count = 0;
 
         while (count < 9) {
             System.out.println("Enter a number: ");
-            int number = data.nextInt();
+            int number = scan.nextInt();
             numbersList[count] = number;
             count++;
         }
         System.out.println(Arrays.toString(numbersList));
 
         System.out.println("Enter what u want to know:\n[1] - Even numbers\n[2] - Odd numbers\n[3] - Negative numbers\n[4] - Positive numbers\n[5] - Exit");
-        int option = data.nextInt();
+        int option = scan.nextInt();
 
         switch (option){
             case 1:
@@ -64,5 +64,7 @@ public class Exercise01 {
                 System.exit(0);
                 break;
         }
+
+        scan.close();
     }
 }

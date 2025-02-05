@@ -1,17 +1,19 @@
+package list_04.src;
+
 import java.util.Scanner;
 
 public class Exercise05 {
     static public void main(String... argv){
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter the hour: ");
-        int hour = data.nextInt();
+        int hour = scan.nextInt();
 
         System.out.println("Enter the minutes: ");
-        int minutes = data.nextInt();
+        int minutes = scan.nextInt();
 
         System.out.println("Enter the seconds: ");
-        int second = data.nextInt();
+        int second = scan.nextInt();
 
         int hourInSeconds = hour * 60 * 60;
         int minutesInSeconds = minutes * 60;
@@ -19,7 +21,7 @@ public class Exercise05 {
         int totalSeconds = hourInSeconds + minutesInSeconds + second;
 
         System.out.println("Total seconds: " + totalSeconds);
-        data.close();
+        scan.close();
 
     }
 }

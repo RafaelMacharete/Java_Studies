@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Exercise04 {
     public static void main(String... argv) {
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         double travelValue = 3000.0;
 
         System.out.println("Where do you intend to spend your vacations? \n[1] - Maceió\n[2] - Porto de Galinhas");
-        String vacationLocal = data.nextLine();
+        String vacationLocal = scan.nextLine();
 
         System.out.println("Do you want lunch/dinner included?\n[1] - Yes\n[0] - No");
-        int lunchAndDinner = data.nextInt();
+        int lunchAndDinner = scan.nextInt();
 
         if (vacationLocal.equals("1") && lunchAndDinner == 1) {
             double totalValue = travelValue * 2;
@@ -30,6 +30,6 @@ public class Exercise04 {
             System.out.println("You entered an invalid value!");
         }
 
-        data.close();
+        scan.close();
     }
 }

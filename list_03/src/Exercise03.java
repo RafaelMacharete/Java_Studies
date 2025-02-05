@@ -3,13 +3,13 @@ package list_03.src;
 import java.util.Scanner;
 public class Exercise03 {
     static public void main(String... argv){
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter the A-team goals: ");
-        int aTeamGoals = data.nextInt();
+        int aTeamGoals = scan.nextInt();
 
         System.out.println("Enter the A-team goals: ");
-        int bTeamGols = data.nextInt();
+        int bTeamGols = scan.nextInt();
 
         if(aTeamGoals == bTeamGols){
             System.out.println("Draw");
@@ -19,6 +19,6 @@ public class Exercise03 {
             System.out.println("Winner: Team B");
         }
 
-        data.close();
+        scan.close();
     }
 }

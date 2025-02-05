@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Exercise05 {
     static public void main(String... argv){
-        Scanner data = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int positiveBalances = 0;
         int negativeBalances = 0;
@@ -12,7 +12,7 @@ public class Exercise05 {
         int toContinue = 1;
         while (toContinue != 0) {
             System.out.println("Enter the balance: ");
-            double balance = data.nextDouble();
+            double balance = scan.nextDouble();
             totalBalances++;
 
             if (balance < 0) {
@@ -21,7 +21,7 @@ public class Exercise05 {
                 positiveBalances++;
             }
             System.out.println("\nDo wanna continue inserting balances?\n[1] - Yes\n[0] - No");
-            toContinue = data.nextInt();
+            toContinue = scan.nextInt();
             if (toContinue == 0) {
                 System.out.println("\nInsertion stop");
                 break;
@@ -36,5 +36,6 @@ public class Exercise05 {
         System.out.println(positiveBalances + " People have positive balances on the bank!");
         System.out.println(negativeBalances + " People have negative balances on the bank!");
 
+        scan.close();
     }
 }
