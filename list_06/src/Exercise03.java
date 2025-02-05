@@ -1,5 +1,6 @@
 package list_06.src;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercise03 {
@@ -13,11 +14,11 @@ public class Exercise03 {
         int bad_rate = 0;
 
         int total_rate = 0;
-        while (toContinue == 'Y'){
+        while (toContinue == 'Y' || toContinue == 'y'){
             System.out.println("Do you want rate the movie?\n[Y] - Yes\n[N] - No");
-            toContinue = data.next().charAt(1);
+            toContinue = data.next().charAt(0);
 
-            if (toContinue == 'N'){
+            if (toContinue == 'N' || toContinue == 'n'){
                 break;
             }
             total_rate++;
@@ -37,6 +38,18 @@ public class Exercise03 {
         double percentage_good = (double)good_rate / total_rate * 100;
         double percentage_bad = (double)bad_rate / total_rate * 100;
 
-        System.out.println("");
+        DecimalFormat toFormat = new DecimalFormat("#.##");
+
+        percentage_great = Double.parseDouble(toFormat.format(percentage_great));
+        percentage_good = Double.parseDouble(toFormat.format(percentage_good));
+        percentage_bad = Double.parseDouble(toFormat.format(percentage_bad));
+
+        double avarege = (great_rate * 1 + good_rate * 2 + bad_rate * 3) / total_rate;
+
+        System.out.println(great_rate + " people answered Great\n" + percentage_great + "%");
+        System.out.println(good_rate + " people answered Good\n" + percentage_good + "%");
+        System.out.println(bad_rate + " people answered Bad\n" + percentage_bad + "%");
+        System.out.println(total_rate + " people answered");
+        System.out.println(avarege + " of avarege");
     }
 }
